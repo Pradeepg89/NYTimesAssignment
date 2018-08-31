@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RQi-xS-NV2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xMG-CH-dg3">
+            <objects>
+                <navigationController storyboardIdentifier="NYTimesFeedNavigationViewController" id="RQi-xS-NV2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WlV-j7-Eie">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.27450980390000002" green="0.90544130409444457" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZK4-UA-9AD" kind="relationship" relationship="rootViewController" id="FQf-2Y-p6u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PY-Ky-cp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1279" y="200"/>
+        </scene>
+        <!--Times Most Viewed Feed View Controller-->
+        <scene sceneID="rYM-Wm-aaG">
+            <objects>
+                <viewController storyboardIdentifier="NYTimesMostViewedFeedViewController" id="ZK4-UA-9AD" customClass="NYTimesMostViewedFeedViewController" customModule="NYTimesAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p3M-Ft-08Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="iaO-y9-Pto"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="goq-1F-vLb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g4E-Bz-qWX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZK4-UA-9AD" id="zWd-qw-Q1h"/>
+                                    <outlet property="delegate" destination="ZK4-UA-9AD" id="9cA-C3-2sM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g4E-Bz-qWX" firstAttribute="top" secondItem="goq-1F-vLb" secondAttribute="top" id="6pE-el-9i9"/>
+                            <constraint firstAttribute="trailing" secondItem="g4E-Bz-qWX" secondAttribute="trailing" id="NtR-nf-JWX"/>
+                            <constraint firstItem="iaO-y9-Pto" firstAttribute="top" secondItem="g4E-Bz-qWX" secondAttribute="bottom" id="SgD-Eo-Pxo"/>
+                            <constraint firstItem="g4E-Bz-qWX" firstAttribute="leading" secondItem="goq-1F-vLb" secondAttribute="leading" id="dWp-GT-ATL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lmj-7q-h0D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z6b-Vi-CXu"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="g4E-Bz-qWX" id="pED-R8-Ai7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjT-aP-fXo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="200"/>
+        </scene>
+        <!--Times Most Viewed Feed Detail View Controller-->
+        <scene sceneID="THk-lS-61s">
+            <objects>
+                <viewController storyboardIdentifier="NYTimesMostViewedFeedDetailViewController" id="6IN-IF-aox" customClass="NYTimesMostViewedFeedDetailViewController" customModule="NYTimesAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uzX-fD-9Xr"/>
+                        <viewControllerLayoutGuide type="bottom" id="0FQ-fb-UBD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exq-CI-feA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xgp-D4-T9Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MI8-eX-suQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BU1-NO-IdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="200"/>
+        </scene>
+    </scenes>
+</document>
